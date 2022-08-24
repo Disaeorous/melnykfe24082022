@@ -1,11 +1,5 @@
+import { ChartProps } from '../../common/interfaces';
 import styles from './chart.module.css';
-
-interface ChartProps {
-	name: string;
-	time: number;
-	step: number;
-	values: any;
-}
 
 export const Chart: React.FC<ChartProps> = (props) => {
 	const { name, time, step, values } = props;
