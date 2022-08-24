@@ -1,0 +1,60 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
+
+:root {
+	--white-h: 48;
+	--white-s: 33%;
+	--white-l: 97%;
+	--white-bg: hsl(300, 100%, 99%);
+	--white-br: hsl(10, 20%, 30%);
+	--white-text: hsl(300, 50%, 99%);
+	--white-border: hsl(120, 33%, 97%);
+	--white-shadow: hsl(300, 33%, 97%);
+	--white: hsl(var(--white-h), var(--white-s), var(--white-l));
+
+	--black-h: 0;
+	--black-s: 0%;
+	--black-l: 12%;
+	--black-bg: hsl(15, 6%, 12%);
+	--black-text: hsl(0, 3%, 19%);
+	--black-border: hsl(0, 5%, 16%);
+	--black: hsl(var(--black-h), var(--black-s), var(--black-l));
+
+	--gray-h: 300;
+	--gray-s: 4%;
+	--gray-l: 85%;
+	--gray-bg: hsl(275, 17%, 86%);
+	--gray-text: hsl(300, 4%, 75%);
+	--gray-border: hsl(280, 6%, 68%);
+	--gray: hsl(var(--gray-h), var(--gray-s), var(--gray-l));
+
+	--blue-h: 213;
+	--blue-s: 91%;
+	--blue-l: 83%;
+	--blue-bg: hsl(207, 75%, 72%);
+	--blue-text: hsl(214, 78%, 65%);
+	--blue-border: hsl(208, 80%, 67%);
+	--blue: hsl(var(--blue-h), var(--blue-s), var(--blue-l));
+
+	--red-h: 354;
+	--red-s: 96%;
+	--red-l: 63%;
+	--red-bg: hsl(0, 84%, 61%);
+	--red-text: hsl(1, 79%, 46%);
+	--red-border: hsl(0, 73%, 44%);
+	--red: hsl(var(--red-h), var(--red-s), var(--red-l));
+}
+
+:root {
+	--height-ratio: 1.73;
+
+	--roboto: Roboto;
+	--user-ff: var(--roboto), sans-serif, cursive;
+	--user-fz: 1.6rem;
+	--user-lh: 1.61;
+
+	--fw-100: 100;
+	--fw-300: 300;
+	--fw-400: 400;
+	--fw-700: 700;
+	--fw-900: 900;
+}

@@ -1,0 +1,34 @@
+html,
+body {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 0.625em;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+
+	text-rendering: optimizeSpeed;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+
+	-webkit-tap-highlight-color: transparent;
+	color: var(--black-text);
+}
+
+body {
+	font-family: var(--roboto), sans-serif;
+	font-size: var(--user-fz);
+	font-weight: var(--fw-400);
+	line-height: var(--user-lh);
+
+	min-height: 100vh;
+
+	color: inherit;
+	background-color: var(--white-bg);
+
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}

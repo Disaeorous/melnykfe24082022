@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* MARGINS */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr,
+ul,
+ol,
+dd,
+dl,
+fieldset,
+blockquote,
+figure,
+pre,
+summary,
+input,
+button {
+	margin: 0;
+}
+
+/* PADDING */
+ul,
+ol,
+legend,
+fieldset,
+input,
+button,
+textarea,
+select,
+select > option,
+td,
+th {
+	padding: 0;
+}
+
+/* FORM TYPES */
+input,
+button,
+select,
+textarea,
+[type='file']::-webkit-file-upload-button {
+	font: inherit;
+	font-size: 100%;
+
+	color: inherit;
+	background-color: transparent;
+
+	border: 1px solid var(--gray-border);
+	outline: none;
+}
+
+[type='date'],
+[type='submit'],
+[type='button'],
+[type='reset'],
+[type='file'],
+[type='color'],
+[type='month'],
+[type='week'],
+[type='datetime-local'],
+button,
+a,
+select {
+	cursor: pointer;
+}
+
+[type='checkbox'],
+[type='radio'],
+label,
+details > summary {
+	margin: 0;
+
+	cursor: pointer;
+	user-select: none;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+/* LIST */
+ul,
+ol {
+	list-style: none;
+	list-style-type: none;
+}
+
+/* TABLE */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* BLOCKQUOTE */
+blockquote,
+q {
+	quotes: none;
+}
+
+q::before,
+q::after {
+	content: none;
+}
