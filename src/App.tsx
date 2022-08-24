@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/base.css';
+import './styles/reset.css';
+import './styles/core.css';
+import './styles/main.css';
+
+import { Chart } from './components/Chart';
+import chartData from './data/chartData.json';
+import { ChartList } from './components/Chart/ChartList';
+import { ChartList2 } from './components/Chart/ChartList2';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='App'>
+			<h1 className='chart__title'>Spent time (seconds)</h1>
+			<Chart name={'Landing page'} time={2} />
+			<ChartList2 />
+			{/* <ChartList /> */}
+		</div>
+	);
 }
 
 export default App;

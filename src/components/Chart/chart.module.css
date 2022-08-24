@@ -1,0 +1,38 @@
+.chart {
+	margin-bottom: 1rem;
+}
+
+.chart__title {
+	font-size: 2rem;
+	line-height: 1.5;
+	text-transform: uppercase;
+
+	color: var(--gray-text);
+}
+
+.chart__box {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	gap: 1.4rem;
+	max-width: 50rem;
+}
+
+.chart__name {
+	color: var(--gray-text);
+	font-size: var(--user-fz);
+	line-height: var(--user-lh);
+	flex: 3;
+}
+
+.chart__bar {
+	background-color: var(--gray-bg);
+	width: 100%;
+	flex: 9;
+}
+
+.chart__progress {
+	padding: 1rem;
+	background-color: var(--blue-bg);
+	color: var(--black-text);
+}
