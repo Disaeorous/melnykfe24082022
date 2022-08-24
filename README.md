@@ -1,6 +1,12 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+What i need todo:
+1. Button -> clicked -> data change randomly
+2. Button should have autoclick every 0.53 min
+3. Chart should be responsive
+4. Typography: Font-family Roboto, font-size 16px for text and 20px for title.
+5. Components and containers of app covered with the tests
+6. No libraries
 
 ## Available Scripts
 
