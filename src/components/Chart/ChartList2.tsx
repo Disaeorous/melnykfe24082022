@@ -3,13 +3,6 @@ import styles from './chart.module.css';
 import chartData1 from '../../data/chartData.json';
 import { Chart } from './Chart';
 
-// const initialData = [
-// 	{ name: 'Landing Page', time: 7.4 },
-// 	{ name: 'Configurator', time: 0.2 },
-// 	{ name: 'Check-out', time: 7.0 },
-// 	{ name: 'Deal', time: 3.8 },
-// ];
-
 interface ChartProps {
 	name: string;
 	time: number;
@@ -44,10 +37,25 @@ export const ChartList2: React.FC<any> = () => {
 		}, 2000);
 	};
 
+	const [testChart, setTestChart] = useState<any>([]);
+	const fetchChart = async () => {
+		const res = await fetch('../../data/chartData.json');
+		const data = await res.json();
+		return data;
+		console.log(data);
+	};
+	const getCharts = async () => {
+		const dataCh = await fetchChart();
+		setTestChart(dataCh);
+	};
+
 	useEffect(() => {
 		setChartData(chartData1);
-		console.log(chartData);
-		autoClicked();
+		// setTestChart(fetchChart);
+		getCharts();
+
+		// console.log(chartData);
+		// autoClicked();
 	}, []);
 
 	return (

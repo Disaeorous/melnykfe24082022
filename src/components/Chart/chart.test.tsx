@@ -1,10 +1,11 @@
+
 import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 
 import { ChartList2 } from './ChartList2';
 import dataChart from '../../data/chartData.json';
 import { Chart } from './Chart';
 
-const chartData = [
+export const chartData = [
 	{ name: 'Landing Page', time: 7.4 },
 	{ name: 'Configurator', time: 0.2 },
 	{ name: 'Check-out', time: 7.0 },
@@ -46,3 +47,4 @@ test('Button should be clicked and change the value of progrees', () => {
 // 	const tree = renderer.create(<Chart name={chartData}/>)
 // 	const chartListProgress = screen.getByTestId('progress-time');
 // });
+

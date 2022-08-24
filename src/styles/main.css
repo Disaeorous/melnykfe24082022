@@ -1,13 +1,7 @@
-.App-header {
-	background-color: #282c34;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+.app {
+	height: 100vh;
+	display: grid;
 	align-items: center;
-	justify-content: center;
-	gap: 1.4rem;
-	font-size: calc(10px + 2vmin);
-	color: white;
 }
 
 .chart__title {
@@ -15,7 +9,7 @@
 	line-height: 1.5;
 	text-transform: uppercase;
 
-	color: var(--gray-text);
+	color: var(--black-text);
 }
 
 .btn {
@@ -30,4 +24,11 @@
 
 .btn:focus {
 	border-color: var(--blue-border);
+}
+
+.container {
+	width: 100%;
+	max-width: 1160px;
+	padding: 0 2rem;
+	margin: 0 auto;
 }
