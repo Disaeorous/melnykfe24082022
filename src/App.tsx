@@ -12,7 +12,6 @@ function App() {
 	return (
 		<div className='App'>
 			<h1 className='chart__title'>Spent time (seconds)</h1>
-			<Chart name={'Landing page'} time={2} />
 			<ChartList2 />
 			{/* <ChartList /> */}
 		</div>
