@@ -19,6 +19,7 @@ export const Chart: React.FC<ChartProps> = (props) => {
 				<h2 className={styles.chart__name}>{name}</h2>
 				<div className={styles.chart__bar}>
 					<div
+						data-testid={`progress-time-${step}`}
 						style={{ width: `${percentage}%` }}
 						className={styles.chart__progress}
 					>

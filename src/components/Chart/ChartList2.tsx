@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './chart.module.css';
 import chartData1 from '../../data/chartData.json';
 import { Chart } from './Chart';
@@ -17,11 +17,7 @@ interface ChartProps {
 
 export const ChartList2: React.FC<any> = () => {
 	const [chartData, setChartData] = useState<any>([]);
-
-	useEffect(() => {
-		setChartData(chartData1);
-		console.log(chartData);
-	}, []);
+	const btnRef = useRef<any>();
 
 	const [index, setIndex] = useState(0);
 
@@ -34,7 +30,25 @@ export const ChartList2: React.FC<any> = () => {
 		const newChart = [...chartData];
 		newChart[index].time = Math.floor(Math.random() * (100 - 0) + 0);
 		setChartData(newChart);
+
+		setTimeout(() => {
+			btnRef.current.click();
+			console.log(btnRef.current);
+		}, 1000);
 	};
+
+	const autoClicked = () => {
+		setTimeout(() => {
+			btnRef.current.click();
+			console.log(btnRef.current);
+		}, 2000);
+	};
+
+	useEffect(() => {
+		setChartData(chartData1);
+		console.log(chartData);
+		autoClicked();
+	}, []);
 
 	return (
 		<div className={styles.chart__group}>
@@ -48,6 +62,8 @@ export const ChartList2: React.FC<any> = () => {
 							values={chartData1}
 						></Chart>
 						<button
+							data-testid={`button-${index}`}
+							ref={btnRef}
 							onClick={() => handlechange(index)}
 							className='btn'
 							type='button'
@@ -57,7 +73,6 @@ export const ChartList2: React.FC<any> = () => {
 					</React.Fragment>
 				);
 			})}
-
 			{/* {JSON.stringify(chartData[index])} */}
 		</div>
 	);
