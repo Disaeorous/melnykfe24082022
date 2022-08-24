@@ -1,5 +1,4 @@
 import { render, screen, cleanup, fireEvent } from '@testing-library/react';
-import renderer from 'react-test-renderer';
 
 import { ChartList2 } from './ChartList2';
 import dataChart from '../../data/chartData.json';
