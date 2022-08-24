@@ -5,11 +5,16 @@ import './styles/main.css';
 
 import { Chart } from './components/Chart';
 import chartData from './data/chartData.json';
+import { ChartList } from './components/Chart/ChartList';
+import { ChartList2 } from './components/Chart/ChartList2';
 
 function App() {
 	return (
 		<div className='App'>
+			<h1 className='chart__title'>Spent time (seconds)</h1>
 			<Chart name={'Landing page'} time={2} />
+			<ChartList2 />
+			{/* <ChartList /> */}
 		</div>
 	);
 }

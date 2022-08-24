@@ -11,7 +11,6 @@ export const Chart: React.FC<ChartProps> = (props) => {
 
 	return (
 		<section className={styles.chart}>
-			<h1 className={styles.chart__title}>Spent time (seconds)</h1>
 			<div className={styles.chart__box}>
 				<h2 className={styles.chart__name}>{name}</h2>
 				<div className={styles.chart__bar}>

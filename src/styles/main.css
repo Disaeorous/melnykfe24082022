@@ -5,6 +5,25 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	gap: 1.4rem;
 	font-size: calc(10px + 2vmin);
 	color: white;
+}
+
+.chart__title {
+	font-size: 2rem;
+	line-height: 1.5;
+	text-transform: uppercase;
+
+	color: var(--gray-text);
+}
+
+.btn {
+	padding: 1rem;
+	border: 1px solid var(--black-border);
+	background-color: var(--gray-bg);
+}
+
+.btn:focus {
+	border-color: var(--blue-border);
 }
