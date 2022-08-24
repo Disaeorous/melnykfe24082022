@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Chart } from './Chart';
+import styles from './chart.module.css';
 import chartData1 from '../../data/chartData.json';
+import { Chart } from './Chart';
 
 // const initialData = [
 // 	{ name: 'Landing Page', time: 7.4 },
@@ -22,26 +23,42 @@ export const ChartList2: React.FC<any> = () => {
 		console.log(chartData);
 	}, []);
 
-	const [index, setIndex] = useState(0); // setting 1st quote as default
+	const [index, setIndex] = useState(0);
 
 	function changeChart() {
 		let newIndex = Math.floor(Math.random() * (chartData.length - 0) + 0); // now on every click setting a random index between 0 and quotes array length (quotes array length is excluded)
 		setIndex(newIndex);
 	}
 
+	const handlechange = (index: number) => {
+		const newChart = [...chartData];
+		newChart[index].time = Math.floor(Math.random() * (100 - 0) + 0);
+		setChartData(newChart);
+	};
+
 	return (
-		<>
+		<div className={styles.chart__group}>
 			{chartData.map((item: ChartProps, index: number) => {
 				return (
 					<React.Fragment key={index}>
-						<Chart name={item.name} time={item.time}></Chart>
+						<Chart
+							name={item.name}
+							time={item.time}
+							step={index}
+							values={chartData1}
+						></Chart>
+						<button
+							onClick={() => handlechange(index)}
+							className='btn'
+							type='button'
+						>
+							Change the data
+						</button>
 					</React.Fragment>
 				);
 			})}
-			<button onClick={changeChart} className='btn' type='button'>
-				Change the data
-			</button>
-			{JSON.stringify(chartData[index])}
-		</>
+
+			{/* {JSON.stringify(chartData[index])} */}
+		</div>
 	);
 };

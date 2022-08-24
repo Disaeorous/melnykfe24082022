@@ -22,6 +22,10 @@
 	padding: 1rem;
 	border: 1px solid var(--black-border);
 	background-color: var(--gray-bg);
+	width: 100%;
+	max-width: 14rem;
+	align-self: flex-start;
+	border-radius: 0.4em;
 }
 
 .btn:focus {
